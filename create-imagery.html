@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <link href="style/dist.css" rel="stylesheet" />
+      <title>White Bear Create Imagery</title>
+   </head>
+   <body>
+      <div
+         class="bg-success w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-success"
+      >
+         <img
+            class="mr-2"
+            src="/icons/success.svg"
+            style="margin-bottom: 3px;"
+            width="28px"
+         />
+         <p class="lead">Card created!</p>
+      </div>
+      <div
+         class="bg-danger w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-error"
+      >
+         <img
+            class="mr-2"
+            src="/icons/error.svg"
+            style="margin-bottom: 3px;"
+            width="28px"
+         />
+         <p class="lead">Oops! Our bad. Please try again.</p>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div
+               class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
+            >
+               <img
+                  alt="White Bear Logo"
+                  src="icons/logo-app.svg"
+                  width="32px;"
+               />
+               <h3 class="d-inline text-brand">White Bear</h3>
+               <a
+                  class="btn btn-link float-right"
+                  href="index.html"
+                  role="button"
+                  >Log out</a
+               >
+               <div
+                  aria-label="navigation"
+                  class="btn-group d-flex"
+                  role="navigation"
+               >
+                  <button class="btn btn-secondary tab-active">
+                     Create new
+                  </button>
+                  <a
+                     class="btn btn-secondary tab-separator"
+                     href="review-imagery.html"
+                     role="button"
+                     >Review</a
+                  >
+                  <a
+                     class="btn btn-secondary tab-separator"
+                     href="all-cards.html"
+                     role="button"
+                     >All Cards</a
+                  >
+               </div>
+               <div class="text-center text-muted my-4">
+                  <h4>Add memorable imagery</h4>
+               </div>
+               <div class="mb-2">
+                  <div class="card bg-primary">
+                     <div class="card-body">
+                        <textarea class="d-sm-none" rows="11"></textarea>
+                        <textarea class="d-none d-sm-block" rows="6"></textarea>
+                     </div>
+                  </div>
+                  <div class="card bg-secondary">
+                     <div class="card-body">
+                        One morning, when Gregor Samsa woke from troubled
+                        dreams, he found himself transformed in his bed into a
+                        horrible vermin. He lay on his armour-like back, and if
+                        he lifted his head a little he could see his brown
+                        belly, slightly domed and divided by arches into stiff
+                        sections.
+                     </div>
+                  </div>
+               </div>
+               <p class="float-right mb-5">0/240</p>
+               <div class="clearfix"></div>
+               <a class="btn btn-link" href="#" id="save-error" role="button"
+                  >Back to answer</a
+               >
+               <button
+                  class="btn btn-primary btn-lg float-right mb-4"
+                  id="save-imagery"
+               >
+                  <img
+                     class="mr-2"
+                     src="/icons/save.svg"
+                     style="margin-bottom: 3px;"
+                     width="20px"
+                  />
+                  Save
+               </button>
+            </div>
+         </div>
+      </div>
+      <script
+         defer
+         src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      ></script>
+      <script defer src="script.js"></script>
+   </body>
+</html>
