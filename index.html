@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="style/dist.css" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <link href="style/dist.css" rel="stylesheet" />
       <title>White Bear</title>
    </head>
    <body class="background-image">
@@ -14,34 +15,123 @@
                class="d-none d-md-block offset-sm-1 col-sm-11 offset-md-1 col-md-11 offset-lg-1 col-lg-11 offset-xl-1 col-xl-11"
             >
                <img src="images/logo-landing.png" />
-               <h1 class="d-inline text-brand">
-                  White Bear
-               </h1>
+               <h1 class="d-inline text-brand">White Bear</h1>
             </div>
          </div>
-       <!-- logo for small sizes -->
-       <div class="d-md-none offset-1">
-         <img src="images/logo-landing.png" class="small-title" />
-         <h1 class="d-inline text-brand small-title">
-            White Bear
-         </h1>
+         <!-- logo for small sizes -->
+         <div class="d-md-none offset-1">
+            <img class="small-title" src="images/logo-landing.png" />
+            <h1 class="d-inline text-brand small-title">White Bear</h1>
+         </div>
       </div>
-   </div>
-  
-         <!-- cards -->
-         <div class="row">
-            <!-- div for both cards with space between them -->
-            <!-- <div> -->
-            <div
-               class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-2 col-lg-3 offset-xl-2 col-xl-3"
-            >
-               <div class="card">
-                  <h2 class="card-title">Nice to meet you</h2>
-                  <p>Sign up for White Bear. Free forever</p>
-                  <form
-                     class="mb-0 d-none needs-validation"
-                     id="sign-up-form"
-                     novalidate    
-</div>
+      <!-- cards -->
+      <div class="row">
+         <!-- div for both cards with space between them -->
+         <!-- <div> -->
+         <div
+            class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-2 col-lg-3 offset-xl-2 col-xl-3"
+         >
+            <div class="card">
+               <h2 class="card-title">Nice to meet you</h2>
+               <p>Sign up for White Bear. Free forever</p>
+               <form
+                  class="mb-0 d-none needs-validation"
+                  id="sign-up-form"
+                  name="sign-up-form"
+                  novalidate=""
+               >
+                  <p class="text-success">Let's get you signed up</p>
+                  <div class="form-group">
+                     <label for="exampleInputEmail2">Email address</label>
+                     <input
+                        class="form-control"
+                        id="new-email-input"
+                        required=""
+                        type="email"
+                     />
+                     <div class="d-none text-danger" id="new-email-error">
+                        email error
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputPassword2"
+                        >Create a password</label
+                     >
+                     <input
+                        class="form-control"
+                        id="new-password-input"
+                        required=""
+                        type="password"
+                     />
+                     <div class="d-none text-danger" id="new-password-error">
+                        password error
+                     </div>
+                  </div>
+                  <a class="btn btn-success w-100" href="#" id="new-user-button"
+                     >Let's Go</a
+                  >
+               </form>
+               <button class="btn btn-success float-right" id="sign-up-button">
+                  Sign up
+               </button>
+            </div>
+         </div>
+         <div
+            class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-1 col-lg-3 offset-xl-1 col-xl-3"
+         >
+            <div class="card">
+               <h2 class="card-title">Welcome back</h2>
+               <p>Log in with your email address and password.</p>
+               <form class="mb-0 needs-validation" novalidate="">
+                  <div class="form-group">
+                     <label for="exampleInputEmail1">Email address</label>
+                     <input
+                        class="form-control"
+                        id="existing-email-input"
+                        required=""
+                        type="email"
+                     />
+                     <div class="d-none text-danger" id="existing-email-error">
+                        email error
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputPassword1">Password</label>
+                     <input
+                        class="form-control"
+                        id="existing-password-input"
+                        required=""
+                        type="password"
+                     />
+                     <div
+                        class="d-none text-danger"
+                        id="existing-password-error"
+                     >
+                        password error
+                     </div>
+                  </div>
+                  <a
+                     class="btn btn-success float-right"
+                     href="#"
+                     id="login-button"
+                     >Log in</a
+                  >
+                  <!-- <a
+                        href="create-answer.html"
+                        class="btn btn-success float-right"
+                        type="submit"
+                        >Log in</a
+                     > -->
+               </form>
+            </div>
+         </div>
+         <!-- </div> -->
+      </div>
+      <!-- JAVASCRIPT LOADING -->
+      <script
+         defer
+         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      ></script>
+      <script defer src="script.js"></script>
    </body>
 </html>
