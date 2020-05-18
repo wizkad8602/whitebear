@@ -1,167 +1,181 @@
-<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <link href="style/dist.css" rel="stylesheet" />
-      <title>White Bear Landing Page</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link rel="stylesheet" href="/style/dist.css" />
+      <title>White Bear</title>
    </head>
-   <body class="landing-background">
-      <div class="container-fluid">
-         <!-- top logo with brand image -->
-         <div
-            class="row mb-8 pt-7 ml-xl-8 ml-lg-5 ml-md-4 mt-5 justify-content-left"
-         >
-            <div class="header">
-               <img
-                  alt="white bear constellation"
-                  class="img-fluid"
-                  src="images/logo-landing.png"
-               />
-               <h1 class="logo-text d-inline">White Bear</h1>
-            </div>
-         </div>
-         <!-- card -->
+   <body class="background-image">
+      <div class="container mt-7">
          <div class="row">
-            <div
-               class="offset-1 col-10 offset-sm-1 col-sm-9 offset-md-1 col-md-4 offset-lg-2 col-lg-4 offset-xl-2 col-xl-4 mb-6"
-            >
-               <div class="card">
-                  <div class="card-body">
-                     <div class="landing-card">
-                        <h2 class="card-title">Nice to meet you</h2>
-                        <p class="card-text mb-5">
-                           Sign up for White Bear.Free Forever.
-                        </p>
-                        <a
-                           aria-controls="signup-collapse"
-                           aria-expanded="false"
-                           class="btn btn-success btn-landing btn-block hide-me"
-                           data-toggle="collapse"
-                           href="#signup-collapse"
-                           role="button"
-                           >Sign up</a
-                        >
-                        <div class="collapse" id="signup-collapse">
-                           <p class="signup-text mb-4">
-                              Lets get you signed up.
-                           </p>
-                           <div class="form-group">
-                              <label class="input-text" for="email"
-                                 >Email address</label
-                              >
-                              <input
-                                 aria-describedby="email-help"
-                                 class="form-control"
-                                 id="signupEmail"
-                                 type="email"
-                              />
-                              <div
-                                 class="alert alert-danger d-none"
-                                 id="signupEmailAlert"
-                                 role="alert"
-                              >
-                                 Please enter your email address.
-                              </div>
-                           </div>
-                           <div class="form-group">
-                              <label class="input-text" for="password"
-                                 >Create a password</label
-                              >
-                              <input
-                                 class="form-control"
-                                 id="signupPassword"
-                                 type="password"
-                              />
-                              <div
-                                 class="alert alert-danger d-none"
-                                 id="signupPasswordAlert"
-                                 role="alert"
-                              >
-                                 Please create a 9 chacater password.
-                              </div>
-                           </div>
-                           <a
-                              class="btn btn-success btn-landing btn-block mt-5"
-                              href="create-answer.html"
-                              id="signupVerify"
-                              >Lets go!</a
-                           >
-                        </div>
+            <div class="col">
+               <!-- NEED TO MAKE MOBILE FRIENDLY <div
+               class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
+            > -->
+               <!--First card, needs correct fonts and margins, also needs drop down when clicking sign up-->
+               <div class="row mb-3">
+                  <div class="col">
+                     <div class="d-flex justify-content-start">
+                        <img
+                           class="img-responsive mr-5 img-size"
+                           src="/images/logo-landing.png"
+                           alt="White Bear Logo"
+                           width="135px;"
+                        />
+                        <h1 class="ml-3 h1-size" style="color: white;">
+                           White Bear
+                        </h1>
                      </div>
                   </div>
                </div>
-            </div>
-            <div
-               class="offset-1 col-10 offset-sm-1 col-sm-9 offset-md-1 col-md-4 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4"
-            >
-               <div class="card">
-                  <div class="card-body">
-                     <div class="landing-card">
-                        <h2 class="card-title">Welcome back</h2>
-                        <p class="card-text mb-4">
-                           Log in with your email address and password
-                        </p>
-                        <div class="form-group" id="loginForm">
-                           <label class="input-text" for="email"
-                              >Email address</label
+
+               <div class="row mt-5">
+                  <div
+                     class="col-xl-4 offset-xl-1 mb-5 col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-6"
+                  >
+                     <div class="card">
+                        <div class="card-body">
+                           <h2 class="card-title">
+                              Nice to meet you
+                           </h2>
+                           <p style="font-size: 13px;" class="mb-1">
+                              Sign up for White Bear. Free forever.
+                           </p>
+                           <p
+                              style="color: blue; font-size: 13px;"
+                              class="mb-5"
+                              id="signUpText"
                            >
-                           <input
-                              aria-describedby="email-help"
-                              class="form-control"
-                              id="loginEmail"
-                              type="email"
-                           />
-                           <div
-                              class="alert alert-danger d-none"
-                              id="emailAlert"
-                              role="alert"
+                              Let's get you signed up.
+                           </p>
+
+                           <button
+                              type="button"
+                              class="btn btn-success btn-block mt-5"
+                              id="signup"
                            >
-                              Please enter your email address.
+                              Sign up
+                           </button>
+                           <!-- Dragdown menu once click on signup -->
+                           <div id="dragdown">
+                              <h4 class="text-muted">Email address</h4>
+                              <input
+                                 class="form-control thick-border"
+                                 type="text"
+                                 required
+                                 id="emailRequired"
+                              />
+                              <p
+                                 id="warningEmail"
+                                 class="mb-4 invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Please enter your email address.
+                              </p>
+                              <h4 class="text-muted">Create a password</h4>
+                              <input
+                                 class="form-control thick-border mb-1"
+                                 type="password"
+                                 required
+                                 id="requiredPassword"
+                              />
+                              <p
+                                 id="warningPassword"
+                                 class="mb-4 invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Please enter your password.
+                              </p>
+                              <p
+                                 id="warningPasswordCharacters"
+                                 class="invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Your password must be at least 9 characters.
+                              </p>
+                              <a
+                                 href="#"
+                                 type="button"
+                                 class="mt-5 btn btn-success btn-block"
+                                 id="letsGo"
+                              >
+                                 Let's go!
+                              </a>
                            </div>
                         </div>
-                        <div class="form-group" id="loginForm">
-                           <label class="input-text" for="password"
-                              >Password</label
-                           >
-                           <input
-                              class="form-control"
-                              id="loginPassword"
-                              type="password"
-                           />
-                           <div
-                              class="alert alert-danger d-none"
-                              id="passwordAlert"
-                              role="alert"
-                           >
-                              Please enter a password over 9 characters.
-                           </div>
+                     </div>
+                  </div>
+
+                  <!--Second card that needs fonts and margins as well-->
+                  <div class="col-xl-4 offset-xl-1 col-lg-5 col-md-5 col-sm-6">
+                     <div class="card">
+                        <div class="card-body">
+                           <h2 class="card-title">
+                              Welcome back
+                           </h2>
+                           <p style="font-size: 13px;" class="mb-5">
+                              Log in with your email address and password.
+                           </p>
+                           <form class="needs-validation">
+                              <h4 class="text-muted">Email address</h4>
+                              <input
+                                 class="form-control thick-border"
+                                 type="text"
+                                 id="welcomeBackEmail"
+                                 required
+                              />
+                              <p
+                                 id="warningWelcomeEmail"
+                                 class="mb-4 invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Please enter your email address.
+                              </p>
+                              <h4 class="text-muted mt-2">Password</h4>
+                              <input
+                                 class="form-control thick-border"
+                                 type="password"
+                                 id="welcomePassword"
+                                 required
+                              />
+                              <p
+                                 id="warningWelcomePassword"
+                                 class="mb-4 invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Please enter your password.
+                              </p>
+                              <p
+                                 id="warningWelcomePasswordCharacters"
+                                 class="invalid-feedback"
+                                 style="display: none; font-size: 13px;"
+                              >
+                                 Your password must be at least 9 characters.
+                              </p>
+                              <!-- disable log in if email/ password fields are not accepted -->
+                              <div class="float-right">
+                                 <a
+                                    href="create-answer.html"
+                                    type="submit"
+                                    class="btn btn-success mt-5 btn-lg"
+                                    id="logIn"
+                                 >
+                                    Log in
+                                 </a>
+                              </div>
+                           </form>
                         </div>
-                        <a
-                           class="btn btn-success btn-lg btn-landing float-right"
-                           href="create-answer.html"
-                           id="loginVerify"
-                           >Log in</a
-                        >
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <script
-         defer
-         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      ></script>
-      <script
-         defer
-         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      ></script>
-      <script
-         defer
-         src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      ></script>
-      <script defer src="/functions.js"></script>
-      <script defer src="script.js"></script>
    </body>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
+   <script src="script.js" defer></script>
 </html>

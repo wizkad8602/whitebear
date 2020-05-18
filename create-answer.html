@@ -1,0 +1,100 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link rel="stylesheet" href="style/dist.css" />
+      <title>Create Answer</title>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div
+               class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
+            >
+               <img
+                  src="icons/logo-app.svg"
+                  width="32px;"
+                  alt="White Bear Logo"
+               />
+
+               <h3 class="d-inline btn-group">White Bear</h3>
+               <a href="index.html" class="btn btn-link float-right">Log out</a>
+
+               <!--Navigation bar-->
+               <div
+                  class="btn-group nav-bar"
+                  role="navigation"
+                  style="width: 100%;"
+                  aria-label="navigation"
+               >
+                  <a
+                     href="create-answer.html"
+                     type="button"
+                     class="btn btn-secondary tab-active"
+                  >
+                     Create new
+                  </a>
+                  <a
+                     href="review-answer.html"
+                     type="button"
+                     class="btn btn-secondary tab-separator"
+                  >
+                     Review
+                  </a>
+                  <a
+                     href="all-cards.html"
+                     type="button"
+                     class="btn btn-secondary tab-separator"
+                  >
+                     All cards
+                  </a>
+               </div>
+
+               <h4 class="my-4 text-center text-muted">Add an answer</h4>
+
+               <!--TOP CARD FOR FUTURE PAGES-->
+
+               <!-- <div class="card bg-primary col-md-12">
+                  <div class="card-body" style="color: white;">
+                     Chicharrones poke affogato PBR&B tumeric meditation artisan migas ramps kickstarter. Biodiesel man bun chia semiotics, etsy lomo tbh dreamcatcher chambray raw denim. Roof party tousled beard mlkshk, keytar aesthetic snackwave. VHS authentic everyday carry drinking vinegar kitsch put a bird on it pickled cold-pressed.
+                  </div>
+               </div> -->
+               <div class="mb-2">
+                  <div class="card bg-secondary">
+                     <div class="card-body">
+                        <textarea
+                           rows="7"
+                           autofocus="autofocus"
+                           id="textInput"
+                        ></textarea>
+                     </div>
+                  </div>
+               </div>
+               <!-- character count-->
+               <p class="float-right mb-4" id="overLimit">
+                  <span id="wordCount">0</span>/240
+               </p>
+               <!-- create margin between card and buttons -->
+               <div class="clearfix"></div>
+
+               <!-- make Button link to next page-->
+               <a
+                  href="create-imagery.html"
+                  type="button"
+                  class="btn btn-outline-primary btn-lg disabled"
+                  style="float: right;"
+                  id="nextButton"
+               >
+                  Next
+               </a>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
+   <script src="script.js" defer></script>
+</html>
