@@ -4,134 +4,164 @@
       <meta charset="UTF-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <link href="style/dist.css" rel="stylesheet" />
-      <title>White Bear</title>
+      <title>White Bear Landing Page</title>
    </head>
-   <body class="background-image">
-      <div class="container-fluid landing-page">
-         <!-- logo and title -->
-         <div class="row mb-8 pt-7">
-            <!-- logo for larger sizes -->
+   <body class="landing-background">
+      <div class="container-fluid">
+         <!-- top logo with brand image -->
+         <div
+            class="row mb-8 pt-7 ml-xl-8 ml-lg-5 ml-md-4 mt-5 justify-content-left"
+         >
+            <div class="header">
+               <img
+                  alt="white bear constellation"
+                  class="img-fluid"
+                  src="images/logo-landing.png"
+               />
+               <h1 class="logo-text d-inline">White Bear</h1>
+            </div>
+         </div>
+         <!-- card -->
+         <div class="row">
             <div
-               class="d-none d-md-block offset-sm-1 col-sm-11 offset-md-1 col-md-11 offset-lg-1 col-lg-11 offset-xl-1 col-xl-11"
+               class="offset-1 col-10 offset-sm-1 col-sm-9 offset-md-1 col-md-4 offset-lg-2 col-lg-4 offset-xl-2 col-xl-4 mb-6"
             >
-               <img src="images/logo-landing.png" />
-               <h1 class="d-inline text-brand">White Bear</h1>
+               <div class="card">
+                  <div class="card-body">
+                     <div class="landing-card">
+                        <h2 class="card-title">Nice to meet you</h2>
+                        <p class="card-text mb-5">
+                           Sign up for White Bear.Free Forever.
+                        </p>
+                        <a
+                           aria-controls="signup-collapse"
+                           aria-expanded="false"
+                           class="btn btn-success btn-landing btn-block hide-me"
+                           data-toggle="collapse"
+                           href="#signup-collapse"
+                           role="button"
+                           >Sign up</a
+                        >
+                        <div class="collapse" id="signup-collapse">
+                           <p class="signup-text mb-4">
+                              Lets get you signed up.
+                           </p>
+                           <div class="form-group">
+                              <label class="input-text" for="email"
+                                 >Email address</label
+                              >
+                              <input
+                                 aria-describedby="email-help"
+                                 class="form-control"
+                                 id="signupEmail"
+                                 type="email"
+                              />
+                              <div
+                                 class="alert alert-danger d-none"
+                                 id="signupEmailAlert"
+                                 role="alert"
+                              >
+                                 Please enter your email address.
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="input-text" for="password"
+                                 >Create a password</label
+                              >
+                              <input
+                                 class="form-control"
+                                 id="signupPassword"
+                                 type="password"
+                              />
+                              <div
+                                 class="alert alert-danger d-none"
+                                 id="signupPasswordAlert"
+                                 role="alert"
+                              >
+                                 Please create a 9 chacater password.
+                              </div>
+                           </div>
+                           <a
+                              class="btn btn-success btn-landing btn-block mt-5"
+                              href="create-answer.html"
+                              id="signupVerify"
+                              >Lets go!</a
+                           >
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-         </div>
-         <!-- logo for small sizes -->
-         <div class="d-md-none offset-1">
-            <img class="small-title" src="images/logo-landing.png" />
-            <h1 class="d-inline text-brand small-title">White Bear</h1>
+            <div
+               class="offset-1 col-10 offset-sm-1 col-sm-9 offset-md-1 col-md-4 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4"
+            >
+               <div class="card">
+                  <div class="card-body">
+                     <div class="landing-card">
+                        <h2 class="card-title">Welcome back</h2>
+                        <p class="card-text mb-4">
+                           Log in with your email address and password
+                        </p>
+                        <div class="form-group" id="loginForm">
+                           <label class="input-text" for="email"
+                              >Email address</label
+                           >
+                           <input
+                              aria-describedby="email-help"
+                              class="form-control"
+                              id="loginEmail"
+                              type="email"
+                           />
+                           <div
+                              class="alert alert-danger d-none"
+                              id="emailAlert"
+                              role="alert"
+                           >
+                              Please enter your email address.
+                           </div>
+                        </div>
+                        <div class="form-group" id="loginForm">
+                           <label class="input-text" for="password"
+                              >Password</label
+                           >
+                           <input
+                              class="form-control"
+                              id="loginPassword"
+                              type="password"
+                           />
+                           <div
+                              class="alert alert-danger d-none"
+                              id="passwordAlert"
+                              role="alert"
+                           >
+                              Please enter a password over 9 characters.
+                           </div>
+                        </div>
+                        <a
+                           class="btn btn-success btn-lg btn-landing float-right"
+                           href="create-answer.html"
+                           id="loginVerify"
+                           >Log in</a
+                        >
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
-      <!-- cards -->
-      <div class="row">
-         <!-- div for both cards with space between them -->
-         <!-- <div> -->
-         <div
-            class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-2 col-lg-3 offset-xl-2 col-xl-3"
-         >
-            <div class="card">
-               <h2 class="card-title">Nice to meet you</h2>
-               <p>Sign up for White Bear. Free forever</p>
-               <form
-                  class="mb-0 d-none needs-validation"
-                  id="sign-up-form"
-                  name="sign-up-form"
-                  novalidate=""
-               >
-                  <p class="text-success">Let's get you signed up</p>
-                  <div class="form-group">
-                     <label for="exampleInputEmail2">Email address</label>
-                     <input
-                        class="form-control"
-                        id="new-email-input"
-                        required=""
-                        type="email"
-                     />
-                     <div class="d-none text-danger" id="new-email-error">
-                        email error
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <label for="exampleInputPassword2"
-                        >Create a password</label
-                     >
-                     <input
-                        class="form-control"
-                        id="new-password-input"
-                        required=""
-                        type="password"
-                     />
-                     <div class="d-none text-danger" id="new-password-error">
-                        password error
-                     </div>
-                  </div>
-                  <a class="btn btn-success w-100" href="#" id="new-user-button"
-                     >Let's Go</a
-                  >
-               </form>
-               <button class="btn btn-success float-right" id="sign-up-button">
-                  Sign up
-               </button>
-            </div>
-         </div>
-         <div
-            class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-1 col-lg-3 offset-xl-1 col-xl-3"
-         >
-            <div class="card">
-               <h2 class="card-title">Welcome back</h2>
-               <p>Log in with your email address and password.</p>
-               <form class="mb-0 needs-validation" novalidate="">
-                  <div class="form-group">
-                     <label for="exampleInputEmail1">Email address</label>
-                     <input
-                        class="form-control"
-                        id="existing-email-input"
-                        required=""
-                        type="email"
-                     />
-                     <div class="d-none text-danger" id="existing-email-error">
-                        email error
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <label for="exampleInputPassword1">Password</label>
-                     <input
-                        class="form-control"
-                        id="existing-password-input"
-                        required=""
-                        type="password"
-                     />
-                     <div
-                        class="d-none text-danger"
-                        id="existing-password-error"
-                     >
-                        password error
-                     </div>
-                  </div>
-                  <a
-                     class="btn btn-success float-right"
-                     href="#"
-                     id="login-button"
-                     >Log in</a
-                  >
-                  <!-- <a
-                        href="create-answer.html"
-                        class="btn btn-success float-right"
-                        type="submit"
-                        >Log in</a
-                     > -->
-               </form>
-            </div>
-         </div>
-         <!-- </div> -->
-      </div>
-      <!-- JAVASCRIPT LOADING -->
       <script
          defer
          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       ></script>
+      <script
+         defer
+         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      ></script>
+      <script
+         defer
+         src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      ></script>
+      <script defer src="/functions.js"></script>
       <script defer src="script.js"></script>
    </body>
 </html>
