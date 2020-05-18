@@ -94,3 +94,22 @@ label {
   margin-top: map-get($spacers, 2);
   margin-bottom: map-get($spacers, 1);
 }
+
+label {
+  // add labels have muted text
+  color: $text-muted;
+}
+
+.background-image {
+  background-image: url("/images/background-landing.jpg"); // need / before folder name in this path
+  background-position-x: center; // keeps image centered, does not stretch it
+  background-position-y: top; // always puts the image centered at the top
+  background-repeat: no-repeat;
+  background-color: black; // if the screen is taller than the image (such as small width screen with the form open), continue the background with flat black color so it looks like the image is just continuing
+}
+
+h4 {
+  // change all h4 headings here in one place
+  text-align: center;
+  color: $text-muted;
+}
