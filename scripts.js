@@ -24,7 +24,7 @@ $("#signup").click(function () {
    $("#signup").hide();
 });
 
-//create if statement that displays red error message if email and password are blank
+//red error message when email and pass are blank
 $("#letsGo").click(function () {
    var emailInput = $("#emailRequired").val();
    if (emailInput.length === 0) {

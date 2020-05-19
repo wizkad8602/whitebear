@@ -1,3 +1,58 @@
+@media screen and (max-width: 640px) {
+   .img-size {
+      max-width: 110px;
+      max-height: 85px;
+   }
+   .h1-size {
+      font-size: 50px;
+   }
+}
+
+@media screen and (max-width: 1007px) {
+   .img-size {
+      max-width: 120px;
+      max-height: 90px;
+   }
+   .h1-size {
+      font-size: 55px;
+   }
+}
+
+//add more @media
+
+h1 {
+   font-weight: $font-weight-normal;
+   $font-family-brand: "Fira Sans";
+}
+h2 {
+   font-size: 27px;
+   font-family: $font-family-serif;
+   color: black;
+}
+
+h3 {
+   font-weight: $font-weight-normal;
+   $font-family-brand: "Fira Sans";
+}
+h4 {
+   font-family: $font-family-sans-serif;
+   font-weight: $font-weight-normal;
+}
+
+// //stardard text
+p {
+   font-size: 16px;
+   font-family: $font-family-sans-serif;
+   text-align: none;
+   color: black;
+}
+
+// button,
+// a {
+//    border-radius: 4px;
+//    font-family: "Noto Sans Bold";
+// }
+
 .btn-link {
    padding-left: 0;
    padding-right: 0;
@@ -5,10 +60,15 @@
    border: 0;
 }
 
+.btn-group .btn {
+   font-weight: $font-weight-normal;
+}
+
 .text-brand {
    font-family: $font-family-brand;
 }
 
+//navigation bar adjustment
 .tab-separator {
    border-left: 1px $gray-800 solid;
 }
@@ -17,6 +77,46 @@
    background-color: $gray-800;
 }
 
+.btn-outline {
+   border-width: 2px;
+}
+
+.btn-button.btn {
+   padding: map-get($map: $spacers, $key: 4);
+}
+
+button.btn-primary {
+   background-color: $gray-700;
+   border-width: 1px;
+   border-right: 2px;
+   border-color: $gray-700;
+}
+
+button.btn-success:hover.focus.active {
+   background-color: $blue-600;
+   border: 2px;
+}
+
+button.btn-danger {
+   background-color: $red;
+   border: 4px solid $black;
+}
+
+.background-image {
+   background-image: url("/Images/background-landing.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   background-position: center;
+   background-color: $black;
+}
+
+.landing-page {
+   font-size: 3.75rem;
+   color: $white;
+}
+
+//card styles
 .card {
    border: 0;
 }
@@ -25,128 +125,54 @@
    color: $white;
    font-family: $font-family-serif;
    font-size: $font-size-base * 1.25;
+   border: 0;
 }
 
-.card-body.allcards {
-   //  smaller text for the cards view
-   font-size: $font-size-base;
-}
-
+//bottom corners of top card are sharp
 .card.bg-primary {
    border-bottom-left-radius: 0;
    border-bottom-right-radius: 0;
 }
 
+//top corners of bottom card are sharp
 .card.bg-secondary {
    border-top-left-radius: 0;
    border-top-right-radius: 0;
-} // broken
-
-.btn-navigation {
-   // nav buttons not bold
-   font-weight: $font-weight-normal;
 }
 
-.card-title {
-   //  card titles on the landing page
-
-   font-family: $font-family-serif;
-   font-size: 27px;
-   font-weight: normal;
+//text area style
+textarea {
+   width: 100%;
+   background-color: transparent;
+   //gets rid of border outline
+   border: none;
+   //shows scroll bar for users
+   overflow: auto;
+   //gets rid of highlighted box
+   outline: none;
+   //gets rid of two lines that drag down box
+   /* https://stackoverflow.com/a/17110012 */
+   resize: none;
+   //add function to automatically focus user on textarea
 }
 
-.landing-page {
-   // formatting to the landing page
-
-   h1 {
-      color: $white;
-      vertical-align: middle;
-      padding-left: map-get($spacers, 6);
-   }
-
-   img.small-title {
-      // smaller title logo
-      width: 20.3125vw;
-   }
-
-   h1.small-title {
-      // smaller title text
-      font-size: 7.8125vw;
-      padding-left: 4.1667vw;
-   }
-
-   .card {
-      padding: map-get($spacers, 4); // pad cards title page
-      margin-bottom: map-get($spacers, 8); // space cards when vertical
-   }
-
-   label {
-      // labels on the forms on the landing page
-      font-size: $font-size-base * 1.25;
-      margin-top: map-get($spacers, 2);
-      margin-bottom: map-get($spacers, 1);
-   }
-}
-
-label {
-   // add labels have muted text
-   color: $text-muted;
-}
-
-.background-image {
-   background-image: url("/images/background-landing.jpg");
-   background-position-x: center; // img centered
-   background-position-y: top; // img centered at top
-   background-repeat: no-repeat;
-   background-color: black;
-}
-
-h4 {
-   // h4 change headings
-   text-align: center;
-   color: $text-muted;
+.thick-border {
+   border-width: $border-width;
+   outline: none;
+   border-color: $gray-400;
 }
 
 .card textarea {
    color: $white;
-   background: transparent;
-
-   border: none;
-   overflow: auto;
-   outline: none;
-
-   -webkit-box-shadow: none;
-   -moz-box-shadow: none;
-   box-shadow: none;
-
-   resize: none;
-   padding: 0px;
-   width: 100%;
 }
 
-.bg-success p.lead,
+.bg-success,
 .bg-danger p.lead {
    color: $white;
-   margin-bottom: 0;
 }
 
-th {
-   // row titles not bold
-   color: $text-muted;
-   font-weight: $font-weight-normal;
-}
+//checkbox styling
 
-.form-control,
-.dropdown-toggle,
-select {
-   // border color grey
-   border-color: $gray-400;
-   font-weight: $font-weight-normal;
+.custom-control-input:checked ~ .custom-control-label::after {
+   background-color: $primary;
 }
-
-// .custom-control-label:before {
-//    background-color: none;
-// }
-// .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-//    background-color: $primary;
-// }
