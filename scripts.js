@@ -10,15 +10,15 @@ $("#create-error").click(function () {
 //    $("#dropdownMenuButton").dropdown("dropdown-menu");
 // });
 
-$("#deleteCard").hide(),
-   $("#customCheck").click(function () {
-      $("#deleteCard").toggle("#deleteCard");
-   });
+$("#deleteCard").hide();
+$("#customCheck").click(function () {
+   $("#deleteCard").toggle();
+});
 
-$("#dragdown, #signUpText").hide(),
-   $("#signup").click(function () {
-      $("#dragdown, #signUpText").slideDown("#dragdown, #signUpText");
-   });
+$("#dragdown, #signUpText").hide();
+$("#signup").click(function () {
+   $("#dragdown, #signUpText").slideDown();
+});
 
 $("#signup").click(function () {
    $("#signup").hide();
@@ -30,10 +30,10 @@ $("#letsGo").click(function () {
    if (emailInput.length === 0) {
       //if userinput equals, then when clicking lets go , error lights up
       $("#warningEmail").show();
-      $("#emailRequired").addClass("is-invalid");
+      $("#emailImput").addClass("is-invalid");
    } else {
-      $("#emailRequired").removeClass("is-invalid");
-      $("#emailRequired").addClass("is-valid");
+      $("#emailImput").removeClass("is-invalid");
+      $("#emailImput").addClass("is-valid");
       $("#warningEmail").hide();
       // console.log("warningEmail"); console.log for the dev's eyes/ can not call ID
    }
